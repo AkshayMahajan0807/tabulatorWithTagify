@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table </title>
+    <link href="https://unpkg.com/tabulator-tables@5.5.0/dist/css/tabulator.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="example-table"></div>
+
+    <div><input type="number" name="" id="input">
+    </div>
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@5.5.0/dist/js/tabulator.min.js"></script>
+    <script src="./script.js"></script>
+       <script>
+        const input=document.querySelector("#input")
+        input.addEventListener("change",(e)=>{
+            console.log(e.target.value)
+            table.selectRow(e.target.value.split(""))
+
+        })
+       </script>
+</body>
+
+</html>
