@@ -56,7 +56,7 @@ var tabledata = [
   },
 ];
 
-var table = new Tabulator("#example-table", {
+const tableFormat = {
   height: 200,
   data: tabledata,
   layout: "fitColumns",
@@ -84,7 +84,8 @@ var table = new Tabulator("#example-table", {
     { title: "Rating", field: "col", resizable: true },
     { title: "Favourite Color", field: "dob", resizable: true },
   ],
-});
+};
+var table = new Tabulator("#example-table", tableFormat);
 let select;
 table.on("rowSelectionChanged", function (data, rows, selected, deselected) {
   //rows - array of row components for the currently selected rows in order of selection
